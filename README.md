@@ -63,7 +63,82 @@ The hardware environment, including the PLC and supporting industrial networking
 - Connected Components Workbench (CCW)
 
 ---
+## Project Structure
 
+micro820-ot-ics-security-assessment/
+│
+├── README.md
+├── LICENSE
+├── .gitignore
+│
+├── 01-project-overview/
+│   ├── executive-summary.md
+│   ├── project-scope.md
+│   └── award-recognition.md
+│
+├── 02-methodology/
+│   ├── system-design.md
+│   ├── network-topology.md
+│   ├── testing-approach.md
+│   └── responsible-use.md
+│
+├── 03-assessment/
+│   ├── network-surface/
+│   │   ├── cip-protocol-analysis.md
+│   │   ├── wireshark-observations.md
+│   │   └── replay-risk-analysis.md
+│   │
+│   ├── control-surface/
+│   │   ├── pycomm3-findings.md
+│   │   └── variable-manipulation-analysis.md
+│   │
+│   ├── firmware-surface/
+│   │   └── firmware-security-questions.md
+│   │
+│   └── availability-surface/
+│       └── dos-risk-micro820.md
+│
+├── 04-tools/
+│   ├── pycomm3/
+│   │   ├── controller-discovery.py
+│   │   ├── cip-session-notes.md
+│   │   └── requirements.txt
+│   │
+│   ├── wireshark/
+│   │   └── filters.md
+│   │
+│   └── packet-analysis/
+│       └── pcap-cip-summary.py
+│
+├── 05-mitigation/
+│   ├── pfsense/
+│   │   ├── implementation-plan.md
+│   │   ├── firewall-rules.md
+│   │   └── validation-testing.md
+│   │
+│   ├── segmentation/
+│   │   └── network-segmentation.md
+│   │
+│   └── cip-security/
+│       └── secure-ethernet-ip.md
+│
+├── 06-results/
+│   ├── key-findings.md
+│   ├── results-outcomes.md
+│   └── lessons-learned.md
+│
+├── 07-diagrams/
+│   ├── current-topology.md
+│   ├── attack-path.md
+│   └── mitigation-topology.md
+│
+├── 08-presentation/
+│   ├── speaking-points.md
+│   └── showcase-summary.md
+│
+└── 09-references/
+    └── references.md
+---
 ## Key Findings
 
 | Area | Finding | Security Impact |
