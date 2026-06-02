@@ -65,6 +65,7 @@ The hardware environment, including the PLC and supporting industrial networking
 ---
 ## Project Structure
 
+```text
 micro820-ot-ics-security-assessment/
 │
 ├── README.md
@@ -74,6 +75,7 @@ micro820-ot-ics-security-assessment/
 ├── 01-project-overview/
 │   ├── executive-summary.md
 │   ├── project-scope.md
+│   ├── sponsor-background.md
 │   └── award-recognition.md
 │
 ├── 02-methodology/
@@ -82,21 +84,29 @@ micro820-ot-ics-security-assessment/
 │   ├── testing-approach.md
 │   └── responsible-use.md
 │
-├── 03-assessment/
-│   ├── network-surface/
+├── 03-security-assessment/
+│   │
+│   ├── protocol-security/
 │   │   ├── cip-protocol-analysis.md
-│   │   ├── wireshark-observations.md
-│   │   └── replay-risk-analysis.md
+│   │   ├── cip-session-analysis.md
+│   │   ├── replay-risk-analysis.md
+│   │   └── wireshark-observations.md
 │   │
-│   ├── control-surface/
+│   ├── controller-security/
 │   │   ├── pycomm3-findings.md
-│   │   └── variable-manipulation-analysis.md
+│   │   ├── variable-manipulation-analysis.md
+│   │   └── access-control-review.md
 │   │
-│   ├── firmware-surface/
-│   │   └── firmware-security-questions.md
+│   ├── network-security/
+│   │   ├── network-exposure-analysis.md
+│   │   ├── segmentation-findings.md
+│   │   └── attack-surface-review.md
 │   │
-│   └── availability-surface/
-│       └── dos-risk-micro820.md
+│   ├── availability-security/
+│   │   └── dos-risk-micro820.md
+│   │
+│   └── firmware-security/
+│       └── firmware-security-questions.md
 │
 ├── 04-tools/
 │   ├── pycomm3/
@@ -110,7 +120,7 @@ micro820-ot-ics-security-assessment/
 │   └── packet-analysis/
 │       └── pcap-cip-summary.py
 │
-├── 05-mitigation/
+├── 05-defensive-architecture/
 │   ├── pfsense/
 │   │   ├── implementation-plan.md
 │   │   ├── firewall-rules.md
@@ -125,19 +135,23 @@ micro820-ot-ics-security-assessment/
 ├── 06-results/
 │   ├── key-findings.md
 │   ├── results-outcomes.md
-│   └── lessons-learned.md
+│   ├── lessons-learned.md
+│   └── future-work.md
 │
 ├── 07-diagrams/
 │   ├── current-topology.md
 │   ├── attack-path.md
-│   └── mitigation-topology.md
+│   ├── mitigation-topology.md
+│   └── defense-in-depth-architecture.md
 │
-├── 08-presentation/
+├── 08-showcase/
 │   ├── speaking-points.md
-│   └── showcase-summary.md
+│   ├── showcase-summary.md
+│   └── award-presentation.md
 │
 └── 09-references/
     └── references.md
+```
 ---
 ## Key Findings
 
