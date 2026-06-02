@@ -50,7 +50,7 @@ The hardware environment, including the PLC and supporting industrial networking
 
 ---
 
-## Technologies Used
+## Methodology & Technologies Used
 
 - Allen-Bradley Micro820 PLC
 - Cisco Industrial Ethernet Switch
