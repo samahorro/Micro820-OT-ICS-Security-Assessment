@@ -75,14 +75,11 @@ micro820-ot-ics-security-assessment/
 ├── 01-project-overview/
 │   ├── executive-summary.md
 │   ├── project-scope.md
-│   ├── sponsor-background.md
-│   └── award-recognition.md
 │
 ├── 02-methodology/
 │   ├── system-design.md
 │   ├── network-topology.md
 │   ├── testing-approach.md
-│   └── responsible-use.md
 │
 ├── 03-security-assessment/
 │   │
@@ -143,11 +140,6 @@ micro820-ot-ics-security-assessment/
 │   ├── attack-path.md
 │   ├── mitigation-topology.md
 │   └── defense-in-depth-architecture.md
-│
-├── 08-showcase/
-│   ├── speaking-points.md
-│   ├── showcase-summary.md
-│   └── award-presentation.md
 │
 └── 09-references/
     └── references.md
