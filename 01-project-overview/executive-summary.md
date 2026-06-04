@@ -1,7 +1,5 @@
 # Executive Summary
 
-# Executive Summary
-
 ## Project Overview
 
 Programming Logic Unit Teardown & Operational Technology Security (PLUTOS) was a Disney-sponsored cybersecurity research project conducted through the California State University, Fullerton Center for Cybersecurity. The project focused on evaluating the security of Programmable Logic Controllers (PLCs) and Industrial Control Systems (ICS) commonly used within Operational Technology (OT) environments.
