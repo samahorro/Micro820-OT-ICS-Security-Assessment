@@ -29,3 +29,11 @@ The engineering workstations represented systems that would normally be used by 
 The flat network architecture intentionally allowed all devices to communicate directly with the PLC. This design enabled the project team to study protocol behavior, identify potential attack surfaces, evaluate access-control mechanisms, and assess the security implications of unrestricted controller access.
 
 The environment served as the baseline architecture for both offensive security assessments and defensive security engineering activities. Findings from this architecture were later used to develop mitigation strategies including network segmentation, firewall enforcement through pfSense, controller access restrictions, and defense-in-depth security controls.
+
+## Network Communcation Between PLC and Workstation
+
+The PLC and the workstation communicated over CIP protocols show in the Figure below:
+
+![img alt](https://github.com/samahorro/Micro820-OT-ICS-Security-Assessment/blob/a476080cb399ccecaa3402d377c4332f4160b615/img/PLC%20Communication.png)
+
+where the Figure represents file uploads and variable uploads that show communication between the PLC and workstation. Which can pose critical threates between the communication betewen the PLC and workstation.
