@@ -1,2 +1,0 @@
-# Cip Session Notes
-
