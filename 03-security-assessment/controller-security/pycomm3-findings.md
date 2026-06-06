@@ -1,2 +1,0 @@
-# Pycomm3 Findings
-
