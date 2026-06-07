@@ -6,7 +6,7 @@ The Defense-in-Depth Architecture was developed as a recommended security design
 
 The design was developed based on observations and findings gathered during the Micro820 PLC security assessment and demonstrates how organizations can implement layered security controls to protect PLCs and industrial communication networks.
 
-![Defense-in-Depth Architecture](../img/defense-in-depth-architecture.png)
+![[Defense-in-Depth Architecture](../img/defense-in-depth-architecture.png](https://github.com/samahorro/Micro820-OT-ICS-Security-Assessment/blob/c2c771f41ed9c440a618304500520370c8fbc1ab/img/Defense-In-Depth%20Architecture.png)
 
 ---
 
