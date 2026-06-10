@@ -64,11 +64,27 @@ In addition to forwarding traffic, the switch can be configured to mirror networ
 
 ---
 
-### IDS/IPS Monitoring Layer
+## IDS/IPS Monitoring Layer
 
-An Intrusion Detection System (IDS) or Intrusion Prevention System (IPS) monitors industrial network traffic for suspicious activity.
+An Intrusion Detection System/Intrusion Prevention System was implemented using **Suricata** with **EveBox** as the alert monitoring dashboard. This layer monitors traffic within the industrial control system network and identifies suspicious or unauthorized communication attempts involving the PLC.
 
-Traffic mirrored from the switch is analyzed to identify abnormal communication patterns, unauthorized CIP sessions, unexpected write operations, and potential attack attempts.
+Traffic mirrored from the switch was analyzed to detect abnormal communication patterns, unauthorized EtherNet/IP and CIP activity, ICMP scanning, and possible reconnaissance attempts against the PLC. EveBox provided centralized visibility into Suricata alerts, allowing security events to be reviewed, filtered, and investigated from a single dashboard.
+
+As shown in the monitoring dashboard, Suricata generated multiple alerts related to PLC communication, including **Unauthorized EtherNet/IP Access Attempts**, **PLC EtherNet/IP CIP Traffic Detected**, **Unauthorized Ping Attempts to PLC**, and **Local ICMP Ping Detected**. These alerts demonstrate that the IDS was able to identify suspicious traffic targeting the PLC at `192.168.0.10`.
+
+### Figures
+
+**Figure 1:** EveBox dashboard showing alert activity over time and the most frequent IDS signatures.
+
+![[IDS Alert System](https://github.com/samahorro/Micro820-OT-ICS-Security-Assessment/blob/a8d6ef930e411082241cb7f368625d84dd09b201/img/IDS%20Alert%20System.png)
+
+**Figure 2:** EveBox analytics dashboard displaying event types, protocols, and top alert signatures.
+
+**Figure 3:** EveBox alert showing an unauthorized ping attempt from `192.168.0.44` to the PLC at `192.168.0.10`, indicating possible reconnaissance activity against the controller.
+
+**Figure 4:** Suricata/EveBox alert view displaying detected PLC-related events such as ICMP ping detection and EtherNet/IP CIP traffic.
+
+---
 
 **Security Controls**
 
