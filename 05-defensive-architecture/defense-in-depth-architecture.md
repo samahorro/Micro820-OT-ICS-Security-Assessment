@@ -76,9 +76,11 @@ As shown in the monitoring dashboard, Suricata generated multiple alerts related
 
 **Figure 1:** EveBox dashboard showing alert activity over time and the most frequent IDS signatures.
 
-![[IDS Alert System](https://github.com/samahorro/Micro820-OT-ICS-Security-Assessment/blob/a8d6ef930e411082241cb7f368625d84dd09b201/img/IDS%20Alert%20System.png)
+![IDS Alert System](https://github.com/samahorro/Micro820-OT-ICS-Security-Assessment/blob/a8d6ef930e411082241cb7f368625d84dd09b201/img/IDS%20Alert%20System.png)
 
 **Figure 2:** EveBox analytics dashboard displaying event types, protocols, and top alert signatures.
+
+![SIEM Dashboard Overview](https://github.com/samahorro/Micro820-OT-ICS-Security-Assessment/blob/dc631fceb5f21cf902c4ab95e88a0274896ab751/img/SIEM%20Dashboard%20Overview.png)
 
 **Figure 3:** EveBox alert showing an unauthorized ping attempt from `192.168.0.44` to the PLC at `192.168.0.10`, indicating possible reconnaissance activity against the controller.
 
