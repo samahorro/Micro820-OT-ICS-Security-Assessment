@@ -1,2 +1,0 @@
-# Defense In Depth Architecture
-
