@@ -62,8 +62,8 @@ The hardware environment, including the PLC and supporting industrial networking
 - pfSense
 - Connected Components Workbench (CCW)
 
----[ECS Expo Poster PDF](https://github.com/samahorro/Micro820-OT-ICS-Security-Assessment/blob/ee95c2bd7d0fcb9dea4ddbdac0245839a3329a53/img/ECS%20EXPO%20Poster.pdf)
----
+![ECS Expo Poster](https://github.com/samahorro/Micro820-OT-ICS-Security-Assessment/blob/f7390ce0447109ec16d8b3275ed49d21739460bd/img/ECS%20Expo%20Poster.png?raw=true)
+
 ## Key Findings
 
 | Area | Finding | Security Impact |
