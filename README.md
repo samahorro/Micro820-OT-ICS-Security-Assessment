@@ -120,12 +120,3 @@ No destructive attack automation, production system testing, or sensitive indust
 All research was conducted in a controlled lab environment using authorized hardware and equipment.
 
 ---
-
-## Project Status
-
-- ✅ Network and protocol analysis completed
-- ✅ Wireshark packet analysis completed
-- ✅ pycomm3 interaction testing completed
-- 🔄 Replay-risk assessment ongoing
-- 🔄 pfSense implementation and validation in progress
-- 📋 Final mitigation testing planned
