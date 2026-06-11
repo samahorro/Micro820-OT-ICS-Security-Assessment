@@ -1,122 +1,178 @@
-# Operational Technology (OT) & Industrial Control Systems (ICS) Security Assessment of an Allen-Bradley Micro820 PLC
+# Operational Technology Security Assessment  
+## Allen-Bradley Micro820 PLC | OT/ICS Cybersecurity Research
 
-> Winner of the CSUF ECS Innovation Showcase Best Sponsor Project Award 🏆
-> 
-> Corporate-sponsored cybersecurity research project conducted in collaboration with **The Walt Disney Company**.
-
-This repository documents a hands-on Operational Technology (OT) and Industrial Control Systems (ICS) cybersecurity assessment of an Allen-Bradley Micro820 Programmable Logic Controller (PLC). The project evaluates the security posture of industrial communications through protocol analysis, controller interaction testing, network security assessment, and defensive architecture design.
-
-The assessment focuses on:
-
-- Common Industrial Protocol (CIP)
-- EtherNet/IP Communications
-- Operational Technology (OT) Security
-- Industrial Control Systems (ICS) Security
-- PLC Network Exposure Analysis
-- Authentication and Access Control Evaluation
-- Controller Variable Manipulation via pycomm3
-- Packet Capture and Protocol Analysis using Wireshark
-- Replay-Risk Indicators and Session Analysis
-- Firewall-Based Security Controls using pfSense
-- Network Segmentation and Defense-in-Depth
-- CIP Security and Secure EtherNet/IP Mitigations
+> 🏆 **Winner of the CSUF ECS Innovation Showcase Best Sponsor Project Award**  
+> Corporate-sponsored cybersecurity research project conducted in collaboration with **The Walt Disney Company**
 
 ---
 
-## Overview
+## Project Overview
 
-Industrial Control Systems (ICS) and Operational Technology (OT) environments often rely on legacy communication protocols that prioritize reliability and deterministic communications over modern cybersecurity protections.
+This repository documents a hands-on **Operational Technology (OT)** and **Industrial Control Systems (ICS)** cybersecurity assessment of an **Allen-Bradley Micro820 Programmable Logic Controller (PLC)**.
 
-This project investigates the security implications of those design assumptions through hands-on analysis of an Allen-Bradley Micro820 PLC operating within a controlled laboratory environment.
+The project focused on evaluating how a PLC communicates across an industrial network, identifying weaknesses in PLC communication, testing read/write access to controller variables, and designing defensive controls to reduce risk in OT environments.
 
-The hardware environment, including the PLC and supporting industrial networking infrastructure, was provided through a corporate-sponsored initiative by **The Walt Disney Company**. The objective was to evaluate industrial communication security, identify potential attack surfaces, analyze protocol behavior, and develop practical defensive strategies for securing PLC-based environments.
-
-![ECS Expo Poster](https://github.com/samahorro/Micro820-OT-ICS-Security-Assessment/blob/f7390ce0447109ec16d8b3275ed49d21739460bd/img/ECS%20Expo%20Poster.png?raw=true)
+Testing was conducted in a controlled lab environment using authorized hardware and tools. The assessment demonstrated how weak or missing security controls in PLC environments can allow unauthorized communication, traffic interception, and control variable manipulation.
 
 ---
 
-## Key Skills Demonstrated
+## Why This Project Matters
 
-- Industrial Control System (ICS) Security
-- Operational Technology (OT) Security
-- Network Security Assessment
-- Protocol Analysis & Packet Inspection
-- Common Industrial Protocol (CIP) Analysis
-- EtherNet/IP Security Research
-- PLC Communications & Controller Interaction
-- Threat Modeling & Risk Assessment
-- Security Architecture & Defense-in-Depth
-- Firewall Design & Network Segmentation
-- Security Monitoring & Detection Engineering
-- Vulnerability Assessment Methodologies
+PLCs are used to control critical physical systems across industries such as manufacturing, healthcare, utilities, transportation, and entertainment infrastructure.
+
+Unlike traditional IT systems, many PLCs prioritize availability, reliability, and real-time control over built-in cybersecurity protections. As a result, insecure PLC communication can create serious risks, including:
+
+- Unauthorized access to industrial devices
+- Loss of process integrity
+- Cleartext exposure of control traffic
+- Manipulation of controller variables
+- Increased risk of disruption to physical operations
+
+This project highlights the importance of applying cybersecurity principles to OT and ICS environments where digital compromise can affect physical systems.
 
 ---
 
-## Methodology & Technologies Used
+## Key Cybersecurity Skills Demonstrated
+
+- Operational Technology Security
+- Industrial Control Systems Security
+- PLC Security Assessment
+- EtherNet/IP and CIP Protocol Analysis
+- Network Traffic Inspection
+- Packet Capture and Analysis
+- Unauthorized Access Testing
+- MITM Risk Analysis
+- Command Injection Testing
+- Controller Variable Read/Write Testing
+- Network Segmentation Design
+- Firewall and ACL Planning
+- IDS/IPS Monitoring Concepts
+- Defense-in-Depth Architecture
+- Risk Assessment and Mitigation Planning
+- Technical Documentation and Research Presentation
+
+---
+
+## Lab Environment
+
+The assessment was performed using a controlled OT lab environment that simulated a real-world PLC network.
+
+### Hardware and Infrastructure
 
 - Allen-Bradley Micro820 PLC
-- Cisco Industrial Ethernet Switch
+- Industrial Ethernet switch
+- Engineering workstation
+- Attacker/test workstation
+- Isolated lab network
+
+### Tools Used
+
 - Kali Linux
-- pycomm3
 - Wireshark
-- Nmap
-- VMware
+- pylogix
+- pycomm3
+- Ettercap
+- Scapy
+- Connected Components Workbench
 - pfSense
-- Connected Components Workbench (CCW)
+- VMware
+
+---
+
+## Project Goals
+
+The main goals of this project were to assess the cybersecurity impact of weak protections in PLC systems by:
+
+- Identifying vulnerabilities in PLC communication and architecture
+- Analyzing EtherNet/IP and CIP traffic between the workstation and PLC
+- Testing read/write access to controller variables during runtime
+- Simulating real-world attack scenarios such as MITM and command injection
+- Observing physical PLC behavior during control manipulation
+- Designing defensive recommendations for securing PLC environments
+
+---
+
+## Methodology
+
+Testing focused on three primary layers of the PLC environment.
+
+### 1. PLC Layer
+
+The PLC layer focused on controller behavior, firmware interaction, and runtime variable access.
+
+Testing included:
+
+- Observing ladder logic execution
+- Reading controller variables
+- Writing to controller variables
+- Monitoring changes in physical PLC behavior
+- Assessing whether access required authentication
+
+### 2. Network Layer
+
+The network layer focused on how the PLC communicated with engineering systems over EtherNet/IP.
+
+Testing included:
+
+- Capturing EtherNet/IP traffic over TCP port `44818`
+- Analyzing CIP request and response traffic
+- Reviewing cleartext communication between the workstation and PLC
+- Identifying protocol-level exposure
+- Observing how industrial traffic could be intercepted in the lab network
+
+### 3. Attack Surface Layer
+
+The attack surface layer focused on how an unauthorized system could interact with the PLC if placed on the same network.
+
+Testing included:
+
+- MITM testing using ARP spoofing
+- Packet capture and inspection
+- Controller variable interaction using Python libraries
+- Command injection testing in a lab environment
+- Assessing access control weaknesses
+
+---
 
 ## Key Findings
 
 | Area | Finding | Security Impact |
-|--------|--------|--------|
-| Network Surface | PLC communication was reachable from devices on the OT network | Increased exposure if network access is obtained |
-| CIP Protocol | Session-based request/response communication observed | Security depends on access controls and session protections |
-| Authentication | No obvious credential exchange observed before protocol interaction | Unauthorized devices may communicate if network access exists |
-| Control Surface | pycomm3 successfully interacted with controller variables in a lab environment | Potential loss of process integrity |
-| Replay Risk | Replay susceptibility depends on session validation and authentication mechanisms | Weak protections may increase replay risk |
-| Mitigation | Firewall segmentation and allowlists can restrict access to industrial services | Reduces unauthorized protocol interaction |
+|---|---|---|
+| Network Surface | PLC communication was reachable from systems on the OT network | Unauthorized devices could attempt communication if network access is obtained |
+| EtherNet/IP / CIP | Communication occurred in cleartext | Control traffic and data could be captured and analyzed |
+| Authentication | Read/write interaction did not require credentials in the tested lab configuration | Unauthorized access risk if network segmentation is weak |
+| Control Surface | Controller variables could be modified during runtime | Potential loss of integrity and unsafe process behavior |
+| MITM Risk | ARP spoofing allowed traffic interception in the lab network | Increased risk of traffic manipulation or observation |
+| Firmware / CCW Layer | PLC logic exposure was identified as a possible risk | Sensitive control logic may be accessible if protections are not enforced |
 
 ---
 
-## Recommended Mitigations
+## Demonstrated Security Risks
 
-- Segment PLCs into dedicated OT security zones
-- Deploy firewall allowlists for industrial communication ports
-- Restrict access to approved engineering and HMI systems
-- Enable controller authentication and role-based access where supported
-- Implement CIP Security / Secure EtherNet/IP where available
-- Monitor for unexpected CIP sessions and write operations
-- Disable unused services and communication paths
-- Apply firmware updates and vendor hardening guidance
+The assessment demonstrated several major OT security risks:
 
----
-
-## Project Impact
-
-This project demonstrates the application of cybersecurity principles within industrial control environments by analyzing protocol behavior, evaluating potential security weaknesses, and designing layered defensive controls.
-
-The work provides practical experience with:
-
-- PLC Security
-- OT Security
-- ICS Security
-- Protocol Analysis
-- Industrial Networking
-- Threat Modeling
-- Security Architecture
-- Network Segmentation
-- Firewall Engineering
-- Defensive Cybersecurity
-
-These skills are commonly required within critical infrastructure, industrial cybersecurity, security engineering, and operational technology security roles.
+- Unauthorized PLC access
+- Cleartext industrial communication
+- Lack of authentication for tested read/write operations
+- Runtime controller variable manipulation
+- Loss of integrity in PLC-controlled processes
+- Data exposure through packet capture
+- Man-in-the-middle risk using ARP spoofing
+- Weak network trust boundaries
 
 ---
 
-## Responsible Use
+## Example Testing Focus
 
-This repository is intended for educational purposes, defensive security research, and authorized laboratory testing only.
+This project included authorized testing of PLC communication using Python-based industrial communication libraries.
 
-No destructive attack automation, production system testing, or sensitive industrial data is included within this repository.
+Testing focused on whether controller variables could be read or modified from an external system within the lab network.
 
-All research was conducted in a controlled lab environment using authorized hardware and equipment.
+```python
+from pycomm3 import LogixDriver
 
----
+PLC_IP = "192.168.0.10"
+
+with LogixDriver(PLC_IP) as plc:
+    result = plc.read("example_tag")
+    print(result)
