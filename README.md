@@ -1,7 +1,7 @@
 # Operational Technology Security Assessment  
 ## Allen-Bradley Micro820 PLC | OT/ICS Cybersecurity Research
 
-> 🏆 **Winner of the CSUF ECS Innovation Showcase Best Sponsor Project Award**  
+> **Winner of the CSUF ECS Innovation Showcase Best Sponsor Project Award**  🏆  
 > Corporate-sponsored cybersecurity research project conducted in collaboration with **The Walt Disney Company**
 
 ---
