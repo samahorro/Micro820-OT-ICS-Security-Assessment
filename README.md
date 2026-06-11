@@ -1,6 +1,7 @@
 # Operational Technology (OT) & Industrial Control Systems (ICS) Security Assessment of an Allen-Bradley Micro820 PLC
 
 > 🏆 Winner of the CSUF ECS Innovation Showcase Best Sponsor Project Award
+> 
 > Corporate-sponsored cybersecurity research project conducted in collaboration with **The Walt Disney Company**.
 
 This repository documents a hands-on Operational Technology (OT) and Industrial Control Systems (ICS) cybersecurity assessment of an Allen-Bradley Micro820 Programmable Logic Controller (PLC). The project evaluates the security posture of industrial communications through protocol analysis, controller interaction testing, network security assessment, and defensive architecture design.
