@@ -249,35 +249,6 @@ Testing confirmed that in the lab configuration:
 
 ---
 
-## Recruiter Highlights
-
-This project demonstrates hands-on cybersecurity experience in OT/ICS environments, including protocol analysis, network security testing, PLC interaction, and defensive architecture design.
-
-Relevant security areas demonstrated:
-
-- OT/ICS cybersecurity assessment
-- Network security and segmentation
-- Protocol analysis using Wireshark
-- PLC communication testing
-- Access control evaluation
-- MITM and ARP spoofing analysis
-- Risk identification and mitigation planning
-- Defense-in-depth architecture design
-- Technical documentation and research presentation
-
-Relevant roles this project aligns with:
-
-- Security Engineer
-- OT Security Analyst
-- ICS Security Analyst
-- Network Security Engineer
-- Cybersecurity Analyst
-- Detection Engineer
-- Vulnerability Management Analyst
-- Infrastructure Security Engineer
-
----
-
 ## Responsible Use
 
 This repository is intended for educational purposes, defensive security research, and authorized laboratory testing only.
