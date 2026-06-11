@@ -1,6 +1,6 @@
 # Operational Technology (OT) & Industrial Control Systems (ICS) Security Assessment of an Allen-Bradley Micro820 PLC
 
-> 🏆 Winner of the CSUF ECS Innovation Showcase Best Sponsor Project Award
+> Winner of the CSUF ECS Innovation Showcase Best Sponsor Project Award 🏆
 > 
 > Corporate-sponsored cybersecurity research project conducted in collaboration with **The Walt Disney Company**.
 
